@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Crash Course</title>
+    <link rel="stylesheet" type="text/css" href="css/dingugrid1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<input id="skaicius-num" type="number" name="num">
+	<input id="skaicius-per" type="number" name="per">
+	<button id="skaiciuoti-mygtukas">Skaiciuoti</button>
+	<div id='result'> </div>
+	<script>
+		function percentage(num, per) {
+			return num - (num/100)*per;
+		}
+	const num = document.getElementById('skaicius-num');
+	const per = document.getElementById('skaicius-per');
+	const mygtukas = document.querySelector('#skaiciuoti-mygtukas');
+	const rezultatas = document.getElementById('result');
+
+	mygtukas.addEventListener('click', apskaiciuoti);
+
+	function apskaiciuoti() {
+		const num1 = parseInt(num.value);
+		const num2 = parseInt(per.value)
+		const beMokesciu = percentage(num1, num2);
+		rezultatas.innerText = beMokesciu;
+	}
+
+	 </script>
+	
+</body>
+</html>
